@@ -1,0 +1,11 @@
+{
+    "usuarios": [
+        {
+            "id": 0,
+            "nome": "Joao Victor Marques",
+            "data_nasc": "30-05-200",
+            "cpf": "57345678933",
+            "telefone": "129914566578"
+        }
+    ]
+}
