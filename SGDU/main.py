@@ -32,7 +32,7 @@ class UserManagement:
 3. Pesquisar
 4. Listar
 5. Editar
-6. Sair\n>> """).sleep()
+6. Sair\n>> """)
 
             if option == "1":
                 nome = input("Nome: ")
