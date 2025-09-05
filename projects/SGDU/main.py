@@ -32,7 +32,7 @@ class UserManagement:
 3. Pesquisar
 4. Listar
 5. Editar
-6. Sair\n>> """)
+6. Sair\n>> """, )
 
             if option == "1":
                 nome = input("Nome: ")
@@ -57,8 +57,24 @@ class UserManagement:
 2. CPF
 3. Telefone
 4. Data de nascimento
->>""").sleep()
-                
+5. ID
+>> """)
+                dados_pesquisa = "Digite o valor: ")
+                if pesquisa == "1":
+                    chave = "nome"
+
+                elif pesquisa == "2":
+                    chave = "cpf"
+                elif pesquisa == "3":
+                    chave = "telefone"
+                elif pesquisa == "4":
+                    chave = "data_nasc"
+                elif pesquisa == "5":
+                    chave = "id"
+
+            dici_pesquisa = {}
+            for id, dat in zip(self.data_json["id"], self.data_json[chave]):
+                if # PAROU AQUI OKKK
             elif option == "4":
                 self.display_user()
             elif option == "6":
@@ -78,6 +94,7 @@ class UserManagement:
         self.index += 1
         self.data_json["usuarios"].append(novo_usuario)
         return self.save_archiver(self.data_json, self.json_archiver)
+
     def _remove_user(self, index):
         try:
             del self.data_json["usuarios"][index]
@@ -87,9 +104,11 @@ class UserManagement:
         except IndexError:
             print("ID inválido.")
             return False
+
     def display_user(self):
         print("\nUsuários cadastrados:")
         print(tabulate(self.data_json["usuarios"], headers="keys", tablefmt="fancy_grid"))
+
     @staticmethod
     def save_archiver(data, filename):
         try:
@@ -99,6 +118,7 @@ class UserManagement:
         except Exception as e:
             print(f"Erro ao salvar: {e}")
             return False
+
     @staticmethod
     def update_ids(lista):
         for i, item in enumerate(lista):
