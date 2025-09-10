@@ -1,14 +1,18 @@
 
 
 class Node:
-    __init__(self, data):
+    def __init__(self, data):
         self.node = data
-        self.left = None
-        self.right = None
+        _self.left = None
+        _self.right = None
 
-    __str__(self):
+    def __str__(self):
         return str(self.node)
 
+
 class BinaryTree:
-    __init__(self):
+    def __init__(self, raiz):
+        self.raiz = Node(raiz)
         
+
+arvore = BinaryTree('A')
