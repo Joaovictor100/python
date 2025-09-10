@@ -3,8 +3,8 @@
 class Node:
     def __init__(self, data):
         self.node = data
-        _self.left = None
-        _self.right = None
+        self._left = None
+        self._right = None
 
     def __str__(self):
         return str(self.node)
